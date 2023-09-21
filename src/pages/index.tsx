@@ -2,9 +2,11 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '../src/shared/components/Link';
+import Link from '../shared/components/Link';
+import { NextPageWithLayout } from '@/shared/types';
+import MainLayout from '@/shared/components/layout/MainLayout';
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   return (
     <Container maxWidth="lg">
       <Box
@@ -25,4 +27,9 @@ export default function Home() {
       </Box>
     </Container>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};
+export default Home;
