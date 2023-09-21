@@ -4,19 +4,24 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from '../src/shared/theme/theme';
-import createEmotionCache from '../src/shared/theme/createEmotionCache';
+import theme from '@/shared/theme/theme';
+import createEmotionCache from '../shared/theme/createEmotionCache';
+import { NextPageWithLayout } from '@/shared/types';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
-export interface MyAppProps extends AppProps {
+export type MyAppProps = AppProps & {
+  Component: NextPageWithLayout;
   emotionCache?: EmotionCache;
-}
+};
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  return (
+
+  const getLayout = Component.getLayout ?? ((page) => page);
+  
+  return getLayout(
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />

@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Link from '../src/shared/components/Link';
+import Link from '../shared/components/Link';
 
 export default function About() {
   return (
