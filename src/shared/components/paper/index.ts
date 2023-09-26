@@ -1,0 +1,1 @@
+export {themePaperPart} from './themePaperPart'

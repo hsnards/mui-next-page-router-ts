@@ -16,13 +16,18 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "next": "latest",
+    "ramda": "^0.29.0",
     "react": "latest",
     "react-dom": "latest",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "stylis": "^4.3.0",
+    "stylis-plugin-rtl": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "latest",
+    "@types/ramda": "^0.29.5",
     "@types/react": "latest",
+    "@types/stylis": "^4.2.1",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "typescript": "latest"

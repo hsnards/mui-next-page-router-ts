@@ -4,10 +4,11 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from '@/shared/theme/theme';
+import { rtlTheme } from '@/shared/theme/theme';
 import createEmotionCache from '../shared/theme/createEmotionCache';
 import { NextPageWithLayout } from '@/shared/types';
-
+import '@/assets/fonts/fa/fontiran.css';
+import '@/assets/fonts/faNum/fontiran.css';
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -20,16 +21,15 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   const getLayout = Component.getLayout ?? ((page) => page);
-  
-  return getLayout(
+
+  return (
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <ThemeProvider theme={rtlTheme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
     </CacheProvider>
   );

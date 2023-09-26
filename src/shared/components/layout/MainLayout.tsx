@@ -2,7 +2,7 @@ import { Box, Button, Container, List, ListItem, ListItemButton } from '@mui/mat
 import { ComponentPropsWithoutRef } from 'react';
 import LogoSrc from '@/assets/images/Logo.png';
 import Image from 'next/image';
-import Classes from './Header.module.scss';
+import classes from './Header.module.scss';
 const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
@@ -13,7 +13,7 @@ const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
         >
           <Image src={LogoSrc} alt="propision" />
 
-          <ul className={Classes.list}>
+          <ul className={classes.list}>
             <li>
               <ListItemButton color="white">سوالات متداول</ListItemButton>
             </li>
@@ -30,9 +30,11 @@ const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
               <ListItemButton>درباره ‌ما</ListItemButton>
             </li>
           </ul>
-          <div className={Classes['auth-container']}>
-            <Button variant="contained">ورود</Button>
-            <Button>عضویت</Button>
+          <div className={classes['auth-container']}>
+            <Button variant='text'>عضویت</Button>
+            <Button variant="contained" color="secondary">
+              ورود
+            </Button>
           </div>
         </Container>
       </Box>
