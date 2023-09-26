@@ -5,6 +5,6 @@
 Install it and run:
 
 ```bash
-npm install
-npm run dev
+yarn install
+yarn run dev
 ```

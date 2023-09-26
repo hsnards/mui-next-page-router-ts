@@ -1,16 +1,45 @@
-import { Box } from '@mui/material';
+import { Box, Button, Container, List, ListItem, ListItemButton } from '@mui/material';
 import { ComponentPropsWithoutRef } from 'react';
-
+import LogoSrc from '@/assets/images/Logo.png';
+import Image from 'next/image';
+import Classes from './Header.module.scss';
 const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <Box component={'header'} p={5}>
-        Header
+      <Box component={'header'} bgcolor={'#0B1226'} borderBottom={'1.5px solid #121B32'}>
+        <Container
+          maxWidth={'xl'}
+          sx={{ py: '35px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
+          <Image src={LogoSrc} alt="propision" />
+
+          <ul className={Classes.list}>
+            <li>
+              <ListItemButton color="white">سوالات متداول</ListItemButton>
+            </li>
+            <li>
+              <ListItemButton>گزارشات و نمودار‌ها</ListItemButton>
+            </li>
+            <li>
+              <ListItemButton>اشتراک ها</ListItemButton>
+            </li>
+            <li>
+              <ListItemButton>بلاگ</ListItemButton>
+            </li>
+            <li>
+              <ListItemButton>درباره ‌ما</ListItemButton>
+            </li>
+          </ul>
+          <div className={Classes['auth-container']}>
+            <Button variant="contained">ورود</Button>
+            <Button>عضویت</Button>
+          </div>
+        </Container>
       </Box>
-      <Box component={'main'} flexGrow={1}>
+      <Box component={'main'} bgcolor={'#0B1226'} flexGrow={1}>
         {children}
       </Box>
-      <Box component={'footer'} p={5}>
+      <Box component={'footer'} bgcolor={'#0B1226'} borderTop={'1.5px solid #121B32'} p={5}>
         Footer
       </Box>
     </Box>
