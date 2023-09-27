@@ -7,7 +7,6 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <Image className={classes.logo} src={LogoSrc} alt="propision" />
-
       <ul className={classes.list}>
         <li>
           <ListItemButton color="white">سوالات متداول</ListItemButton>
@@ -25,7 +24,7 @@ const Header = () => {
           <ListItemButton>درباره ‌ما</ListItemButton>
         </li>
       </ul>
-      <div className={classes['auth-container']}>
+      <div className={classes.authContainer}>
         <Button variant="text">عضویت</Button>
         <Button variant="contained" color="secondary">
           ورود
@@ -33,7 +32,6 @@ const Header = () => {
       </div>
 
       <Image className={classes.menu} src={Menu} alt={'menu icon'} />
-
     </header>
   );
 };

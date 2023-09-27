@@ -1,0 +1,21 @@
+$breakpoint-mobile: 300px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+@mixin media($type) {
+  @if $type == 'mobile' {
+    @media screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $type == 'tablet' {
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $type == 'desktop' {
+    @media screen and (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else {
+    @error "Invalid media query type: #{$type}. Use 'mobile', 'tablet', or 'desktop'.";
+  }
+}

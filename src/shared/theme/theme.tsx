@@ -10,6 +10,7 @@ export const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 });
+
 const defaultOptions: ThemeOptions = {
   shape: {
     borderRadius: 24,
@@ -18,7 +19,9 @@ const defaultOptions: ThemeOptions = {
     primary: {
       main: variables.primaryMain,
       dark: variables.primaryDark,
+    
     },
+    
     secondary: {
       main: variables.secondaryMain,
       dark: variables.secondaryDark,

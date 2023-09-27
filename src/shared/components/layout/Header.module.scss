@@ -1,4 +1,5 @@
-@use '/src/shared/styles/variables.module.scss' as variables;
+@use 'shared/styles/variables.module' as variables;
+@use 'shared/styles/mixins.module' as *;
 
 $desktop: 1440px;
 
@@ -9,7 +10,7 @@ $desktop: 1440px;
   align-items: center;
   padding: 64px 24px 24px;
 
-  @media screen and (min-width: $desktop) {
+  @include media('desktop') {
     justify-content: space-between;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -18,13 +19,13 @@ $desktop: 1440px;
 
 .logo {
   margin-inline-start: auto;
-  @media screen and (min-width: $desktop) {
+  @include media('desktop') {
     margin: 0;
   }
 }
 
 .list {
-  @media screen and (min-width: $desktop) {
+  @include media('desktop') {
     display: flex;
     align-items: center;
     gap: 32px;
@@ -40,8 +41,8 @@ $desktop: 1440px;
   display: none;
 }
 
-.auth-container {
-  @media screen and (min-width: $desktop) {
+.authContainer {
+  @include media('desktop') {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -51,7 +52,7 @@ $desktop: 1440px;
 
 .menu {
   margin-right: auto;
-  @media screen and (min-width: $desktop) {
+  @include media('desktop') {
     display: none;
   }
 }
