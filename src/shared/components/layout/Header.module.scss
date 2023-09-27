@@ -1,18 +1,57 @@
-.list {
+@use '/src/shared/styles/variables.module.scss' as variables;
+
+$desktop: 1440px;
+
+.header {
+  background-color: variables.$neutral-dark;
+  border-bottom: 1.5px solid #121b32;
   display: flex;
   align-items: center;
-  gap: 32px;
+  padding: 64px 24px 24px;
 
-  > li {
-    color: white;
-  }
-  > li:first-child {
-    list-style: none;
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 }
 
+.logo {
+  margin-inline-start: auto;
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.list {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    > li {
+      color: variables.$neutral-white;
+    }
+    > li:first-child {
+      list-style: none;
+    }
+  }
+
+  display: none;
+}
+
 .auth-container {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  display: none;
+}
+
+.menu {
+  margin-right: auto;
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
