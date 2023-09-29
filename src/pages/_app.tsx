@@ -28,7 +28,7 @@ export default function MyApp(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={rtlTheme}>
-        <CssBaseline />
+        <CssBaseline  />
         {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
     </CacheProvider>

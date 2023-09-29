@@ -19,9 +19,8 @@ const defaultOptions: ThemeOptions = {
     primary: {
       main: variables.primaryMain,
       dark: variables.primaryDark,
-    
     },
-    
+
     secondary: {
       main: variables.secondaryMain,
       dark: variables.secondaryDark,
@@ -91,6 +90,15 @@ const defaultOptions: ThemeOptions = {
   components: {
     MuiButton: themeButtonPart,
     MuiPaper: themePaperPart,
+    MuiCssBaseline: {
+      styleOverrides: `
+
+      *{
+        margin:0;
+        padding:0;
+      }
+      `,
+    },
   },
 };
 

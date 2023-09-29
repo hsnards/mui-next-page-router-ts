@@ -1,0 +1,68 @@
+@use 'shared/styles/mixins.module.scss' as *;
+@use 'shared/styles/variables.module.scss' as *;
+
+.featuresSection {
+  @include max-w('desktop');
+
+  padding: 64px 24px 0px;
+
+  @include media('desktop') {
+    padding: 88px 108px 0px;
+  }
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  background-color: $neutral-dark;
+  gap: 32px;
+  padding: 40px 24px;
+  height: 432px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  &:hover {
+    background-color: $neutral-lighten-dark;
+
+    &::after {
+      content: ' ';
+      width: 96px;
+      height: 4px;
+      position: absolute;
+      top: 0px;
+      background-color: #ffcf71;
+      border-radius: 2px;
+      transition-delay: 0.1s;
+    }
+  }
+  .cardTitle {
+    color: $neutral-white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+
+    @include media('desktop') {
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+  .cardCaption {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $neutral-white;
+
+    @include media('desktop') {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  @include media('desktop') {
+    padding: 40px;
+    padding-bottom: 56px;
+    height: 416px;
+  }
+}

@@ -19,3 +19,10 @@ $breakpoint-desktop: 1440px;
     @error "Invalid media query type: #{$type}. Use 'mobile', 'tablet', or 'desktop'.";
   }
 }
+
+@mixin max-w($type) {
+  @if $type == 'desktop' {
+    max-width: $breakpoint-desktop;
+    margin: auto;
+  }
+}

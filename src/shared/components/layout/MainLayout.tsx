@@ -1,15 +1,15 @@
 import { Box, Button, Container, List, ListItem, ListItemButton } from '@mui/material';
 import { ComponentPropsWithoutRef } from 'react';
-import back from '@/assets/images/background-small.svg'
+import back from '@/assets/images/background-small.svg';
 import Header from './Header';
 const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Header />
       <Box
         component={'main'}
         flexGrow={1}
-        sx={{ backgroundImage: `url('${back}')` }}
+        sx={{ backgroundColor: '#0B1226', backgroundImage: `url('/images/bg-pattern.png')` }}
       >
         {children}
       </Box>
