@@ -1,7 +1,7 @@
 import { Box, Button, Container, List, ListItem, ListItemButton } from '@mui/material';
 import { ComponentPropsWithoutRef } from 'react';
-import back from '@/assets/images/background-small.svg';
-import Header from './Header';
+import { Header } from './header';
+import { Footer } from './footer';
 const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -9,13 +9,11 @@ const MainLayout = ({ children }: ComponentPropsWithoutRef<'div'>) => {
       <Box
         component={'main'}
         flexGrow={1}
-        sx={{ backgroundColor: '#0B1226', backgroundImage: `url('/images/bg-pattern.png')` }}
+        sx={{ backgroundColor: '#0B1226'}}
       >
         {children}
       </Box>
-      <Box component={'footer'} bgcolor={'#0B1226'} borderTop={'1.5px solid #121B32'} p={5}>
-        Footer
-      </Box>
+      <Footer />
     </Box>
   );
 };

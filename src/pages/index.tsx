@@ -7,7 +7,8 @@ import {
   AboutSection,
   ServicesSection,
   VisionSection,
-  QuestionsAnswers
+  QuestionsAnswers,
+  NewsArticlesSection,
 } from '@/components/home/components';
 import Head from 'next/head';
 
@@ -23,6 +24,7 @@ const Home: NextPageWithLayout = () => {
       <ServicesSection />
       <VisionSection />
       <QuestionsAnswers />
+      <NewsArticlesSection />
     </>
   );
 };

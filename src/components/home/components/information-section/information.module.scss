@@ -1,10 +1,12 @@
-@use 'shared/styles/mixins.module.scss' as *;
-@use 'shared/styles/variables.module.scss' as *;
-
 .informationSection {
-  @include max-w('desktop');
   padding-top: 64px;
   padding-inline: 24px;
+  background-image: url('/images/bg-pattern.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include max-w('desktop');
   @include media('desktop') {
     padding-top: 96px;
   }

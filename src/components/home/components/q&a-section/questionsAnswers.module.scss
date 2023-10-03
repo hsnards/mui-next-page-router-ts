@@ -1,17 +1,16 @@
-@use 'shared/styles/mixins.module.scss' as *;
-@use 'shared/styles/variables.module.scss' as *;
 
 .servicesSection {
   margin-top: 80px;
   padding-inline: 24px;
   max-width: 808px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+
   @include media('desktop') {
     margin-top: 184px;
     padding: 0;

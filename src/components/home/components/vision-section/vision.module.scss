@@ -1,6 +1,3 @@
-@use 'shared/styles/mixins.module.scss' as *;
-@use 'shared/styles/variables.module.scss' as *;
-
 .visionSection {
   padding-inline: 8px;
   padding-top: 80px;
@@ -47,7 +44,7 @@
   margin-top: 56px;
   gap: 88px;
   position: relative;
-  max-width: 1106px;
+  max-width: 1016px;
 
   &::after {
     content: ' ';
@@ -74,12 +71,63 @@
   width: 100%;
   z-index: 2;
   box-shadow: 0px 24px 72px 0px rgba(11, 18, 38, 0.08);
+  position: relative;
+
+  .svg {
+    fill: white;
+  }
+
+  &::before {
+    content: '';
+    width: 56px;
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 28px);
+    height: 4px;
+    background-color: #1089ff;
+    border-radius: 4px;
+    visibility: hidden;
+    transition: visibility, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      visibility: visible;
+      opacity: 1;
+    }
+    .svg {
+      fill: #1089ff;
+      transition: fill 0.2s ease-in-out;
+    }
+    .title {
+      color: #1089ff;
+    }
+  }
+
+  &:nth-child(odd) .svg {
+    @include media('desktop') {
+      position: absolute;
+      right: calc(100% + 24px);
+      top: 50%;
+      transform: rotate(180deg);
+    }
+  }
+
+  &:nth-child(even) .svg {
+    @include media('desktop') {
+      position: absolute;
+      left: calc(100% + 24px);
+      top: 50%;
+    }
+  }
 
   .title {
     font-size: 14px;
     color: $neutral-dark-grey;
     font-weight: 700;
     line-height: 24px;
+    transition: color 0.2s ease-in-out;
   }
 
   .caption {

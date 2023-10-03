@@ -2,7 +2,7 @@ import * as React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentProps, DocumentContext } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import { AppType } from 'next/app';
-import  { roboto , rtlTheme } from '@/shared/theme/theme';
+import { roboto, rtlTheme } from '@/shared/theme/theme';
 import createEmotionCache from '@/shared/theme/createEmotionCache';
 import { MyAppProps } from './_app';
 
@@ -15,7 +15,7 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
     <Html lang="fa" dir="rtl" className={roboto.className}>
       <Head>
         {/* PWA primary color */}
-        <meta name="theme-color" content={rtlTheme.palette.primary.main} />
+        <meta name="theme-color" content={rtlTheme.palette.neutral.dark} />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}

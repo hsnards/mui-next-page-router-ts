@@ -18,15 +18,7 @@ export const InformationSection = () => {
         مختلف تهران (محله و بلوک شهری) تعیین کنید.
       </h4>
       <div className={classes.imageContainer}>
-        <Image
-          loading="lazy"
-          priority={false}
-          className={classes.tryForIt}
-          src={svg}
-          alt="try for it"
-          width={94}
-          height={112}
-        />
+        <Image className={classes.tryForIt} src={svg} alt="try for it" width={94} height={112} />
       </div>
     </section>
   );
