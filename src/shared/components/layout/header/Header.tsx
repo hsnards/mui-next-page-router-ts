@@ -6,9 +6,10 @@ import classes from './Header.module.scss';
 import { useState } from 'react';
 
 import dynamic from 'next/dynamic';
-const MobileHeader = dynamic(() => import('./MobileHeader').then((module) => module.MobileHeader), {
+const MobileHeader = dynamic(() => import('./mobile').then((module) => module.MobileHeader), {
   ssr: false,
 });
+
 export const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<null | HTMLElement>(null);

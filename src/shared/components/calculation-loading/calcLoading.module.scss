@@ -1,0 +1,33 @@
+.loading__container {
+  width: 100%;
+  height: 80vh;
+  background-color: #0b1226;
+  background-image: url('/images/footer-bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  
+  @include media('desktop') {
+    background-position: left;
+    margin: auto;
+  }
+}
+
+.loading__text {
+  color: $neutral-white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  width: 100%;
+
+  @include media('desktop') {
+    width: 357px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
