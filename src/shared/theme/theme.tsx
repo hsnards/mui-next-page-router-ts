@@ -3,7 +3,7 @@ import { ThemeOptions } from '@mui/material';
 import { themeButtonPart } from '@/shared/components/button';
 import { themePaperPart } from '@/shared/components/paper';
 import { createTheme } from './utils';
-import variables from '@/shared/styles/variables.module.scss';
+import variables from '@/shared/styles/_alias.module.scss';
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],

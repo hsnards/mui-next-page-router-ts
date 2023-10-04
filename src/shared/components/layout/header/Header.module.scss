@@ -1,5 +1,4 @@
-@use 'shared/styles/variables.module' as variables;
-@use 'shared/styles/mixins.module' as *;
+
 
 $desktop: 1440px;
 
@@ -36,7 +35,7 @@ $desktop: 1440px;
     gap: 32px;
 
     > li {
-      color: variables.$neutral-white;
+      color: $neutral-white;
     }
     > li:first-child {
       list-style: none;
